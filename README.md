@@ -1,2 +1,2 @@
 # ExpenseTracker
-Track yout expenses
+Track your expenses
