@@ -8,6 +8,8 @@ const authRoutes = require('./routes/authRoutes');
 const expenseRoutes = require('./routes/expenseRoutes');
 const ocrRoutes = require('./routes/ocrRoutes');
 const budgetRoutes = require('./routes/budgetRoutes');
+const analyticsRoutes = require('./routes/analyticsRoutes');
+const reminderRoutes = require('./routes/reminderRoutes');
 
 dotenv.config();
 connectDB();
@@ -21,6 +23,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/ocr', ocrRoutes);
 app.use('/api/budget', budgetRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/reminders', reminderRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
